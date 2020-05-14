@@ -447,7 +447,6 @@ function ($, D3pie, visibility, NProgress, stickyTabs, tab_stat, tab_graph, tab_
                 $("#mainUI").hide();
                 $(dialog).show();
                 $(backdrop).show();
-                $("#connectPassword").focus();
                 $("#connectForm").off("submit");
 
                 $("#connectForm").on("submit", function (e) {
@@ -485,6 +484,8 @@ function ($, D3pie, visibility, NProgress, stickyTabs, tab_stat, tab_graph, tab_
                         server: "local"
                     });
                 });
+
+                $("#connectPassword").focus();
             }
         });
     };
